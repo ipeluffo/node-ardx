@@ -51,6 +51,7 @@ exports.jsprimer = function(req, res) {
 exports.exercise = function(req, res) {
   var contentDir = path.join(contentRoot, detectLanguage(req));
   var exercises = require(path.join(contentDir, 'exercises'));
+  var menu = require(path.join(contentDir, 'menu.json'));
 
 	var exIndex = parseInt(req.params.ex, 10) - 1;
   if (exIndex >= 0 && exIndex < exercises.length) {
@@ -60,6 +61,8 @@ exports.exercise = function(req, res) {
 		if (exNumber.length == 1) {
 			exNumber = "0" + exNumber;
 		}
+    data.name = '';
+    data.menu = menu;
 		data.exIndex = exIndex;
 		data.circCode = exNumber;
 		data.isExercise = true;

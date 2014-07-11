@@ -18,5 +18,13 @@
   "tmp36": "TMP36 Sensor",
   "relay": "Relay",
   "breadboard": "Breadboard",
-  "header-pins": "Header Pins"
+  "header-pins": "Header Pins",
+  "exercise": "Exercise",
+  "parts": "Parts",
+  "circuit-layout": "Circuit Layout",
+  "assembly": "Assembly",
+  "code": "Code",
+  "troubleshooting": "Troubleshooting",
+  "extending": "Extending the Code",
+  "more": "More"
 }

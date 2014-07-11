@@ -18,5 +18,13 @@
   "tmp36": "Sensor TMP36",
   "relay": "Relé",
   "breadboard": "Protoboard",
-  "header-pins": "Pines de Conexión"
+  "header-pins": "Pines de Conexión",
+  "exercise": "Ejercicio",
+  "parts": "Componentes",
+  "circuit-layout": "Circuito",
+  "assembly": "Montaje",
+  "code": "Código",
+  "troubleshooting": "Solución de Problemas",
+  "extending": "Extendiendo el Código",
+  "more": "Más"
 }
