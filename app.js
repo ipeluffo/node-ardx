@@ -21,10 +21,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.intro);
-app.get('/electronics-primer', routes.eprimer);
-app.get('/js-primer', routes.jprimer);
-app.get('/exercises/:ex', routes.exercise);
+app.get('/exercises/:ex/:lang?', routes.exercise);
+app.get('/electronics-primer/:lang?', routes.eprimer);
+app.get('/js-primer/:lang?', routes.jsprimer);
+app.get('/:lang?', routes.intro);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

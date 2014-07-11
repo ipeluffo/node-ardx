@@ -1,0 +1,22 @@
+{
+  "introduction": "Introducción",
+  "eprimer": "Electrónica Básica",
+  "jsprimer": "JavaScript Básico",
+  "reference": "Referencia",
+  "exercises": "Ejercicios",
+  "led": "LED",
+  "diode": "Diodo",
+  "resistor": "Resistencia",
+  "transistor": "Transistor",
+  "servo": "Servo",
+  "dc-motor": "Motor DC",
+  "piezo": "Piezo Elemento",
+  "ic": "Circuito Integrado",
+  "pushbutton": "Butón Push",
+  "potentiomenter": "Potenciometro",
+  "photo-resistor": "Foto resistencia",
+  "tmp36": "Sensor TMP36",
+  "relay": "Relé",
+  "breadboard": "Protoboard",
+  "header-pins": "Pines de Conexión"
+}

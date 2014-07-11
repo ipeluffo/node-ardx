@@ -1,48 +1,59 @@
-var exercises = require('../public/content/exercises.json');
 var markedejs = require('markedejs');
+var path = require('path');
+var fs = require('fs');
 
-exports.intro = function(req, res){
-	markedejs.renderFile('public/content/introduction.md', {}, function(err, html){
-		res.render('layout',
-		{
-			title: 'Arduino Experimenter\'s Guide for NodeJS',
-			subtitle: '',
-			exercises: exercises,
-			isExercise: false,
-			thumbnail: '',
-			content: html
-		});
-	});
+var contentRoot = 'public/content';
+var langs = fs.readdirSync(contentRoot);
+
+var detectLanguage = function (req) {
+  var lang = req.params.lang || 'en';
+
+  // If no lang is found on content dir, default to english
+  if (langs.indexOf(lang) == -1) {
+    lang = 'en';
+  }
+
+  return lang;
 };
-exports.eprimer = function(req, res){
-	markedejs.renderFile('public/content/eprimer.md', {}, function(err, html){
-		res.render('layout',
-		{
-			title: 'Electronics Primer',
-			subtitle: '',
-			exercises: exercises,
-			isExercise: false,
-			thumbnail: '',
-			content: html
-		});
-	});
+
+var loadContent = function (name, req, res) {
+  var contentDir = path.join(contentRoot, detectLanguage(req));
+  var file = path.join(contentDir, name + '.md');
+  var meta = require(path.join(contentDir, 'meta.json'));
+  var menu = require(path.join(contentDir, 'menu.json'));
+
+  markedejs.renderFile(file, {}, function (err, html) {
+    res.render('layout', {
+      name: name,
+      title: meta[name].title,
+      menu: menu,
+      subtitle: '',
+      exercises: require(path.join(contentDir, 'exercises')),
+      isExercise: false,
+      thumbnail: '',
+      content: html
+    })
+  });
 };
-exports.jprimer = function(req, res){
-	markedejs.renderFile('public/content/jsprimer.md', {}, function(err, html){
-		res.render('layout',
-		{
-			title: 'JavaScript Primer',
-			subtitle: '',
-			exercises: exercises,
-			isExercise: false,
-			thumbnail: '',
-			content: html
-		});
-	});
+
+exports.intro = function(req, res) {
+  loadContent('introduction', req, res);
 };
-exports.exercise = function(req, res){
+
+exports.eprimer = function(req, res) {
+  loadContent('eprimer', req, res);
+};
+
+exports.jsprimer = function(req, res) {
+  loadContent('jsprimer', req, res);
+};
+
+exports.exercise = function(req, res) {
+  var contentDir = path.join(contentRoot, detectLanguage(req));
+  var exercises = require(path.join(contentDir, 'exercises'));
+
 	var exIndex = parseInt(req.params.ex, 10) - 1;
-	if (exIndex >= 0 && exIndex < exercises.length) {
+  if (exIndex >= 0 && exIndex < exercises.length) {
 		var data = exercises[exIndex];
 		data.exercises = exercises;
 		var exNumber = (exIndex + 1) + "";
@@ -52,7 +63,7 @@ exports.exercise = function(req, res){
 		data.exIndex = exIndex;
 		data.circCode = exNumber;
 		data.isExercise = true;
-		markedejs.renderFile('public/content/exercises/ex' + (exIndex+1) + '.md', {}, function(err, html){
+		markedejs.renderFile(contentDir + '/exercises/ex' + (exIndex+1) + '.md', {}, function(err, html){
 			data.content = html;
 			res.render('layout',data);
 		});

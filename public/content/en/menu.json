@@ -1,0 +1,22 @@
+{
+  "introduction": "Introduction",
+  "eprimer": "Electronics Primer",
+  "jsprimer": "JavaScript Primer",
+  "reference": "Reference",
+  "exercises": "Exercises",
+  "led": "LED",
+  "diode": "Diode",
+  "resistor": "Resistor",
+  "transistor": "Transistor",
+  "servo": "Servo",
+  "dc-motor": "DC Motor",
+  "piezo": "Piezo Element",
+  "ic": "IC",
+  "pushbutton": "Push Button",
+  "potentiomenter": "Potentiometer",
+  "photo-resistor": "Photo Resistor",
+  "tmp36": "TMP36 Sensor",
+  "relay": "Relay",
+  "breadboard": "Breadboard",
+  "header-pins": "Header Pins"
+}

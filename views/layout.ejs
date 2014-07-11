@@ -7,17 +7,17 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-  	<div class="pure-g-r content<% if (!isExercise && title!="Electronics Primer") { %> noExerciseMenu<% } %>" id="layout">
-  		<div class="pure-u<% if (!isExercise && title!="Electronics Primer") { %> noExerciseMenu<% } %>" id="nav">
+  	<div class="pure-g-r content<% if (!isExercise && name!="eprimer") { %> noExerciseMenu<% } %>" id="layout">
+  		<div class="pure-u<% if (!isExercise && name!="eprimer") { %> noExerciseMenu<% } %>" id="nav">
   			<a href="#" class="nav-menu-button">Menu</a>
   			<div class="nav-inner">
   				<div class="pure-menu pure-menu-open">
   					<ul>
-  						<li<% if (title=="Introduction") { %> class="selected"<% } %>><a href="/">Introduction</a></li>
-  						<li class="pure-menu-heading">Reference</li>
-  						<li<% if (title=="Electronics Primer") { %> class="selected"<% } %>><a href="/electronics-primer">Electronics Primer</a></li>
-  						<li <% if (title=="JavaScript Primer") { %> class="selected"<% } %>><a href="/js-primer">JavaScript Primer</a></li>
-  						<li class="pure-menu-heading">Exercises</li>
+              <li<% if (name=="introduction") { %> class="selected"<% } %>><a href="/"><%= menu['introduction'] %></a></li>
+              <li class="pure-menu-heading"><%= menu['reference'] %></li>
+              <li<% if (name=="eprimer") { %> class="selected"<% } %>><a href="/electronics-primer"><%= menu['eprimer'] %></a></li>
+              <li <% if (name=="jsprimer") { %> class="selected"<% } %>><a href="/js-primer"><%= menu['jsprimer'] %></a></li>
+              <li class="pure-menu-heading"><%= menu['exercises'] %></li>
   						<% exercises.forEach(function(exercise, index){ %>
 
   						  <li class="<% if (isExercise && index == exIndex) { %>selected<% } %>">
@@ -33,7 +33,7 @@
   		<% if (isExercise) { %>
   		  <% include exercisemenu %>
   		<% } %>
-      <% if (title == "Electronics Primer") { %>
+      <% if (name == "eprimer") { %>
         <% include eprimermenu %>
       <% } %>
   		<div class="pure-u-1" id="main">
@@ -61,10 +61,3 @@
     <script type="text/javascript" src="/javascripts/ss.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
