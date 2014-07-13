@@ -1,40 +1,40 @@
 <a id="intro"></a>
 ## ACERCA DE ESTA GUÍA
 
-NodeBots are Arduino-based robots that are controlled by [node.js](http://nodejs.org/). 
+NodeBots son robots basados en Arduino que son controlados através de [node.js](http://nodejs.org/). 
 
-This guide will step you through assembling and progamming a number of projects using an Arduino-compatible microcontroller and node.js, to help you get started building your own NodeBots. This guide has been designed to be used with the Arduino Experimenter's Kit, which is available from several suppliers, including SparkFun, AdaFruit, SEEED Studio and Freetronics.
+Esta guía te ayudará en el montaje y programación de una serie de proyectos utilizando microcrontroladores compatibles con Arduino y node.js, para ayudarte a construir tu propio NodeBots. Esta guía ha sido diseñada para ser usada con el Kit de Experimentación de Arduino, el cual está disponible por varios proveedores, incluyendo SparkFun, Adafruit y Freetronics.
 
-The overall goal of the this guide is fun. Beyond this, the aim is to get you comfortable using node.js to control a wide range of electronic components through small, simple and easy circuits. The focus is to get each circuit working then to give you the tools to figure out how it works and how to extend it. 
+El objetivo general de esta guía es divertirse. Más allá de esto, el objetivo es que usted se sienta cómodo utilizando node.js para controral un amplio rango de componentes electrónicos a través de pequeños, simples y sencillos circuitos. El proposito es conseguir que cada circuito funcione y luego darte las herramientas para que averigues como funciona y como extenderlo.
 
 ![ARDX](/images/ARDX-cover.jpg "ARDX")
 
 <a id="installing"></a>
-### Installing
+### Instalación
 
-You can install this guide to your own computer. Make sure you have node.js and the node package manager (npm) installed first.
+Tu puedes instalar esta guía en tu computador. Asegurate de tener node.js y npm instalado antes de empezar.
 
-Install this guide with the following commands:
+Para instalar esta guía debes ejecutar los siguientes comandos:
 
 `git clone https://github.com/AnnaGerber/node-ardx.git && cd node-ardx`
 
 `npm install`
 
 
-Run the node-ardx web application from the node-ardx directory:
+Ejecuta la aplicación web node-ardx web desde el directorio node-ardx:
 
 `node app.js`
 
-Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the guide.
+Visita [http://localhost:3000](http://localhost:3000) en tu navegador para ver la guía.
 
 <a id="openhardware"></a>
-## ABOUT OPEN SOURCE HARDWARE
+## ACERCA DE HARDWARE OPEN SOURCE
 
-This guide has been adapted by [Anna Gerber](https://github.com/AnnaGerber) from the SparkFun version of .:oomlout:.'s ARDX (Arduino Experimenter's) Guide.
+Esta guía ha sido adaptada por [Anna Gerber](https://github.com/AnnaGerber) de la versión de SparkFun por .:oomlout:. ARDX (Arduino Experimenter's) Guide.
 
-All of .:oomlout:.'s projects are open source. What does this mean? It means that all of the materials that make up the ARDX kit, including this guide, circuit diagrams and code are available for free download. But it goes further: you're also free to reproduce and modify any of this material, then distribute it for yourself. This is possible because this guide is released under a Creative Commons (CC-BY-SA) license. If you reproduce or modify this guide you must credit SparkFun and .:oomlout:. in your design and share your developments in a similar manner. Why? We grew up learning and playing with open source software and the experience was good fun. We think it would be lovely if a similar experience was possible with physical things.
+Todos los proyectos de .:oomlout:. son open source. ¿Esto que significa? Significa que todo el material que compone el kit ARDX, incluyendo esta guía, los diagramas de circuitos y el código están disponibles gratuitamente para descargar. Pero va mas allá: también eres libre de reproducir y modificar cualquiera de estos materiales, y también distribuirlos. Esto es posible porque esta guía está publicada bajo una licencia Creative Commons (CC-BY-SA). Si usted reproduce o modifica esta guía deberá dar crédito a SparkFun y .:oomlout:. en su diseño y compartir sus desarrollos de una forma similar. ¿Por qué? Nosotros crecimos jugando con software open source y la experiencia ha sido muy divertida. Nosotros pensamos que esta experiencia puede ser similar y posible con cosas físicas.
 
-More details on the Creative Commons CC (By Share Alike) License can be found at http://ardx.org/CCLI](http://ardx.org/CCLI).
+Más detalles sobre la licencia Creative Commons CC (By Share Alike) puede encontrarse en http://ardx.org/CCLI](http://ardx.org/CCLI).
 
 <a id="j5"></a>
 ## ABOUT JOHNNY-FIVE
