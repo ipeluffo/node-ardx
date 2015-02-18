@@ -37,48 +37,48 @@ Todos los proyectos de .:oomlout:. son open source. ¿Esto que significa? Signif
 Más detalles sobre la licencia Creative Commons CC (By Share Alike) puede encontrarse en http://ardx.org/CCLI](http://ardx.org/CCLI).
 
 <a id="j5"></a>
-## ABOUT JOHNNY-FIVE
+## ACERCA DE JOHNNY-FIVE
 
-We will be working with the [Johnny-Five](https://npmjs.org/package/johnny-five) library for node.js to program our nodebots. Johnny-Five uses a protocol called [Firmata](http://firmata.org/wiki/Main_Page) to communicate with the microcontroller over USB (Universal Serial Bus).
+Trabajaremos con la librería [Johnny-Five](https://npmjs.org/package/johnny-five) para node.js para programar nuestros nodebots. Johnny-Five usa un protocolo llamado [Firmata](http://firmata.org/wiki/Main_Page) para comunicarse con el microcontrolador a través del puerto USB (Universal Serial Bus).
 
 <a id="firmata"></a>
-### Setting Up Firmata
+### Configurando Firmata
 
-Before you can start programming your NodeBots, you will need to load Firmata onto your Arduino-compatible microcontroller:
+Antes de que puedas comenzar a programar tu NodeBots, necesitaras cargar Firmata en tu microcontrolador compatible con Arduino:
 
-* Download [Arduino IDE](http://arduino.cc/en/main/software)
-* Connect your Arduino-compatible microcontroller via USB
-* Launch Arduino IDE and open the Firmata sketch via the menu: `File > Examples > Firmata > StandardFirmata`
-* Select your Arduino board type (e.g. Arduino Uno) via `Tools > Board`
-* Select the port for your board via `Tools > Serial Port > (the comm port of your Arduino)`
-* Upload the program by selecting `File > Upload`
+* Descargar [Arduino IDE](http://arduino.cc/en/main/software)
+* Conectar tu microcontrolador compatible con Arduino via USB
+* Iniciar Arduino IDE y abrir el esquema Firmata usando el menú: `File > Examples > Firmata > StandardFirmata`
+* Seleccionar el tipo de tu placa Arduino (por ej. Arduino Uno) en `Tools > Board`
+* Seleccionar el puerto de tu placa en `Tools > Serial Port > (el puerto comm de tu Arduino)`
+* Cargar tu programa seleccionando `File > Upload`
 
-If you are having trouble uploading, a full trouble shooting guide can be found here: [http://ardx.org/TRBL](http://ardx.org/TRBL)
+Si tienes algún programa cargando el programa, puedes encontrar una guía completa de ayuda (en Inglés) aquí: [http://ardx.org/TRBL](http://ardx.org/TRBL)
 
 <a id="running"></a>
-### Running a Johnny-Five program
+### Ejecutando un programa Johnny-Five
 
-The Johnny-Five module has already been installed when you installed this guide, so any code examples you create within the node-ardx directory will run. If you are creating code in a different location, you will need to install the Johnny-Five module, e.g:
+El módulo Johnny-Five ya ha sido instalado cuando instalaste esta guía, así que cualquier ejemplo de código que creas dentro del directorio node-ardx podrán ejecutarse. Si generas código en una ubicación diferente, necesitaras instalar el módulo Johnny-Five, por ejemplo:
 
 `npm install johnny-five`
 
-Run code examples from the terminal e.g.
+Ejecutar los ejemplos de código desde la terminal por ej.:
 
 `node code/CIRC01-code-led-a-strobe.js`
 
 <a id="repl"></a>
-### Using the REPL
+### Usando el REPL
 
-Johnny-Five provides a Read-Eval-Print-Loop (REPL) that allows you type commands to control hardware interactively while your program is running. See the exercises for examples.
+Johnny-Five provee un Read-Eval-Print-Loop (REPL, en Español sería Leer-Evaluar-Imprimir-Repetir) que te permite escribir comandos para controlar el hardware de manera interactiva mientras tu programa esta siendo ejecutado. Ver los ejercicios para ejemplos.
 
-## License
+## Licencia
 
-The source code is available from https://github.com/AnnaGerber/node-ardx
+El código fuente esta disponible en https://github.com/AnnaGerber/node-ardx
 
-Code examples are issued under an MIT license
+Los ejemplos de código son creados bajo licencia MIT
 
-This work is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported License
+Este trabajo esta licenciado bajo la licencia Creative Commons Attribution-Share Alike 3.0 Unported License
 
-To view a copy of this license visit http://creativecommons.org/licenses/by-sa/3.0/
+Para ver ver una copia de esta licencia visitar http://creativecommons.org/licenses/by-sa/3.0/
 
-Or send a letter to: Creative Commons<COMMA> 171 Second Street<COMMA> Suite 300<COMMA> San Francisco<COMMA> California 94105<COMMA> USA.
+O enviar un correo a: Creative Commons<COMMA> 171 Second Street<COMMA> Suite 300<COMMA> San Francisco<COMMA> California 94105<COMMA> USA.
